@@ -16,13 +16,13 @@ public class CsvParser {
     public static List parseCSV(String file) throws FileNotFoundException,
             IOException {
         CSVParser parser = new CSVParser(new FileReader("./inputs/" + file),
-                CSVFormat.EXCEL);
-
+                CSVFormat.DEFAULT);
         List<CSVRecord> records = parser.getRecords();
-        String[] line = Arrays.toString(records.get(6).values()).replace("[", "").replace("]", "").split("\\|");
+        // String[] line = Arrays.toString(records.get(3).values()).replace("[",
+        // "").replace("]", "").split("\\|");
 
-        System.out.println(line[1]);
-   
+        // System.out.println(line[1]);
+
         parser.close();
         return records;
     }
