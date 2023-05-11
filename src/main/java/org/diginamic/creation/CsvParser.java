@@ -13,6 +13,13 @@ import java.util.List;
 
 public class CsvParser {
 
+    
+    /** 
+     * @param file
+     * @return List
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
     public static List parseCSV(String file) throws FileNotFoundException,
             IOException {
         CSVParser parser = new CSVParser(new FileReader("./inputs/" + file),

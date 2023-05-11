@@ -20,11 +20,20 @@ public class BrandRepository implements Dao {
         this.entityManager = entityManager;
     }
 
+    
+    /** 
+     * @param id
+     * @return Optional
+     */
     @Override
     public Optional get(long id) {
         return Optional.ofNullable(entityManager.find(Brand.class, id));
     }
 
+    
+    /** 
+     * @return List
+     */
     @Override
     public List getAll() {
         Query query = entityManager.createQuery("SELECT c FROM Brand c");

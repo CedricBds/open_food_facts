@@ -16,6 +16,10 @@ public class Brand {
     @Column(name="name", nullable = true, length = 255, unique = true)
     private String name;
 
+    
+    /** 
+     * @return Set<Product>
+     */
     public Set<Product> getProducts() {
         return products;
     }

@@ -15,6 +15,10 @@ public class Ingredient {
     @ManyToMany(mappedBy = "ingredients")
     private List<Product> products;
 
+    
+    /** 
+     * @return List<Product>
+     */
     public List<Product> getProduct() {
         return products;
     }

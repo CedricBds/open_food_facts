@@ -36,6 +36,10 @@ public class Product {
     @Column(name = "grade", nullable = true, length = 255)
     private String grade;
 
+    
+    /** 
+     * @return Long
+     */
     public Long getId() {
         return id;
     }

@@ -19,6 +19,11 @@ public class ProductCategoryRepository implements Dao {
         this.entityManager = entityManager;
     }
 
+    
+    /** 
+     * @param id
+     * @return Optional
+     */
     @Override
     public Optional get(long id) {
         return Optional.ofNullable(entityManager.find(ProductCategory.class, id));

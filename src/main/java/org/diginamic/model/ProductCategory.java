@@ -17,6 +17,10 @@ public class ProductCategory {
     private String label;
 
 
+    
+    /** 
+     * @return Set<Product>
+     */
     public Set<Product> getProducts() {
         return products;
     }

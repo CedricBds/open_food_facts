@@ -20,6 +20,11 @@ public class IngredientRepository implements Dao {
         this.entityManager = entityManager;
     }
 
+    
+    /** 
+     * @param id
+     * @return Optional
+     */
     @Override
     public Optional get(long id) {
         return Optional.ofNullable(entityManager.find(Ingredient.class, id));
